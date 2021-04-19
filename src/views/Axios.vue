@@ -9,6 +9,9 @@
             <el-button class="button" type="text" @click="getUserInfo"
               >点击获取XPoet信息
             </el-button>
+            <el-button class="button" type="text" @click="getUserInfo1"
+              >点击获取信息
+            </el-button>
           </div>
         </template>
         <div class="info-list-box" v-loading="loading">
@@ -45,11 +48,26 @@ export default defineComponent({
           console.error(error)
         })
     }
+    const getUserInfo1 = () => {
+      loading.value = true
+      axios
+        .get('http://www.kuaidi100.com/query?type=yuantong&postid=11111111111')
+        .then((response) => {
+          console.log('response: ', response.data)
+          userInfo.value = response.data
+          loading.value = false
+        })
+        .catch((error) => {
+          loading.value = false
+          console.error(error)
+        })
+    }
 
     return {
       userInfo,
       loading,
-      getUserInfo
+      getUserInfo,
+      getUserInfo1
     }
   }
 })
