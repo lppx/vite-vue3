@@ -1,59 +1,134 @@
-# Vite2.x + Vue3.x + TypeScript Starter
 
-[![Author](https://img.shields.io/badge/author-XPoet-orange.svg)](https://github.com/XPoet)
-[![License](https://img.shields.io/github/license/XPoet/vite-vue3-starter.svg)](https://github.com/XPoet/vite-vue3-starter/blob/master/LICENSE)
-[![Stars](https://img.shields.io/github/stars/XPoet/vite-vue3-starter)](https://github.com/XPoet/vite-vue3-starter)
-[![Deploy](https://github.com/XPoet/vite-vue3-starter/workflows/deploy/badge.svg)](https://github.com/XPoet/vite-vue3-starter/actions/workflows/deploy.yml)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-Airbnb-hotpink.svg)](https://github.com/lin-123/javascript)
+<div align="center">
+<br/>
 
-![demo](https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/vite-vue3/image.60j460o44fo0.png)
+  <h1 align="center">
+    Pear Admin Ant
+  </h1>
+  <h4 align="center">
+    开 箱 即 用 的 Vue 3.0 前 端 开 发 框 架
+  </h4> 
 
-## 搭建教程
+  [预 览](http://ant.pearadmin.com)   |   [官 网](http://www.pearadmin.com/)   |   [群聊](https://jq.qq.com/?_wv=1027&k=5OdSmve)   |   [社区](http://forum.pearadmin.com/)
 
-- 掘金 https://juejin.cn/post/6951649464637636622
+</div>
 
-- 博客 https://xpoet.cn/2021/04/从-0-开始手把手带你搭建一套规范的-Vue3.x-项目工程环境/
+<p align="center">
+    <a href="#">
+        <img src="https://img.shields.io/badge/Pear Admin Ant-1.3.0.release-green.svg" alt="Pear Admin Ant Version">
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/badge/Vue-3.0.0+-green.svg" alt="Vue Version">
+    </a>
+      <a href="#">
+        <img src="https://img.shields.io/badge/Ant Design Vue-2.0.0.beta+-green.svg" alt="Ant Design Vue Version">
+    </a>
+</p>
+<div align="center">
+  <img  width="92%" style="border-radius:10px;margin-top:20px;margin-bottom:20px;box-shadow: 2px 0 6px gray;" src="https://images.gitee.com/uploads/images/2020/1112/005939_5a252a51_4835367.png" />
+</div>
+
+### 开源地址
+
+Gitee 开源地址: [前往下载](https://gitee.com/pear-admin/pear-admin-ant)
 
 
-## 技术栈
+Github 开源地址: [前往下载](https://github.com/PearAdmin/Pear-Admin-Ant)
 
-- 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)
-- 构建工具：[Vite 2.x](https://cn.vitejs.dev/)
-- 前端框架：[Vue 3.x](https://v3.cn.vuejs.org/)
-- 路由工具：[Vue Router 4.x](https://next.router.vuejs.org/zh/index.html)
-- 状态管理：[Vuex 4.x](https://next.vuex.vuejs.org/)
-- UI 框架：[Element Plus](https://element-plus.org/#/zh-CN)
-- CSS 预编译：[Stylus](https://stylus-lang.com/) / [Sass](https://sass.bootcss.com/documentation) / [Less](http://lesscss.cn/)
-- HTTP 工具：[Axios](https://axios-http.com/)
-- Git Hook 工具：[husky](https://typicode.github.io/husky/#/) + [lint-staged](https://github.com/okonet/lint-staged)
-- 代码规范：[EditorConfig](http://editorconfig.org) + [Prettier](https://prettier.io/) + [ESLint](https://eslint.org/) + [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#translation)
-- 提交规范：[Commitizen](http://commitizen.github.io/cz-cli/) + [Commitlint](https://commitlint.js.org/#/)
-- 单元测试：[vue-test-utils](https://next.vue-test-utils.vuejs.org/) + [jest](https://jestjs.io/) + [vue-jest](https://github.com/vuejs/vue-jest) + [ts-jest](https://kulshekhar.github.io/ts-jest/)
-- 自动部署：[GitHub Actions](https://docs.github.com/cn/actions/learn-github-actions)
+### 主题模式
 
-## 快速开始
+| 默认主题  | 白色主题  |  夜间主题  |
+|---|---|---|
+| ![输入图片说明](https://images.gitee.com/uploads/images/2020/1108/150340_f168fc5d_4835367.png "黑色主题.png")  | ![输入图片说明](https://images.gitee.com/uploads/images/2020/1108/150351_953099c2_4835367.png "白色主题.png")  |  ![输入图片说明](https://images.gitee.com/uploads/images/2020/1108/150406_27a29e34_4835367.png "夜间主题.png")  |
+|---|---|---|
 
-### 安装依赖
+### 布局方式
 
-```sh
+| 侧边布局  | 顶部布局 |  联动布局  |
+|---|---|---|
+| ![输入图片说明](https://images.gitee.com/uploads/images/2020/1108/150535_ad4ad37a_4835367.png "黑色主题.png")  | ![输入图片说明](https://images.gitee.com/uploads/images/2020/1108/150548_2d6381ee_4835367.png "顶部布局.png")  | ![输入图片说明](https://images.gitee.com/uploads/images/2020/1108/150557_bc164bfc_4835367.png "联动布局.png")  |
+|---|---|---|
+
+### 主题配色
+
+| 黄色主题  | 绿色主题 |  蓝色主题  |
+|---|---|---|
+| ![输入图片说明](https://images.gitee.com/uploads/images/2020/1112/005917_e2433885_4835367.png "黄色.png")  | ![输入图片说明](https://images.gitee.com/uploads/images/2020/1112/005939_5a252a51_4835367.png "绿色.png")  | ![输入图片说明](https://images.gitee.com/uploads/images/2020/1112/005952_3c465c30_4835367.png "蓝色.png") |
+|---|---|---|
+
+### 多选项卡
+
+| DOT主题  | CARD主题 |  BTN主题  |
+|---|---|---|
+| ![输入图片说明](https://images.gitee.com/uploads/images/2021/0124/181653_e19b682a_4835367.png "选项卡1.png") | ![输入图片说明](https://images.gitee.com/uploads/images/2021/0124/181711_5af239fd_4835367.png "选项卡2.png")  | ![输入图片说明](https://images.gitee.com/uploads/images/2021/0124/181730_1718d754_4835367.png "选项卡3.png") |
+|---|---|---|
+
+
+### 项目安装
+```
 npm install
-# or
-yarn add
+
+或
+
+cnpm install
 ```
 
-### 启动项目
+### 项目运行
+```
+npm run serve-dev
 
-```sh
-npm run dev
+或
+
+npm run serve-prod
 ```
 
-### 项目打包
+### 编译项目
+```
+npm run build-dev
 
-```sh
-npm run build
+或
+
+npm run build-prod
 ```
 
-## 许可
+## 示例截图
 
-MIT Copyright © 2021 XPoet
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1104/172456_91ab3275_4835367.png "ssssssssssssss.png")
 
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1115/210101_56754a0e_4835367.png "主题.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1025/214245_00adb66f_4835367.png "ant1.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1025/214254_4677557c_4835367.png "ant2.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1025/214302_b36f13d8_4835367.png "ant3.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1025/214310_a363ecb3_4835367.png "ant4.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1025/214319_5e551a1b_4835367.png "ant5.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1025/214328_b50b62e8_4835367.png "ant6.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1025/214337_e99d7b78_4835367.png "ant7.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1025/214346_4e5261c2_4835367.png "ant8.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1025/214354_d3c1d47d_4835367.png "ant9.png")
+
+### 目录结构
+```
+pear-admin-ant
+|-src
+  |-api             http请求
+  |-assets          静态资源
+  |-component       常用组件目录       
+  |-config          项目配置文件
+  |-directives      自定义指令目录
+  |-layout          页面整体布局-layout
+  |-mock            mock数据
+  |-router          页面路由 
+  |-utils           工具类
+  |-view            页面目录
+  |-App.vue         Vue主文件
+  |-main.js         Vue加载启动文件
+```

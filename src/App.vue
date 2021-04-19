@@ -1,27 +1,35 @@
 <template>
-  <Main />
+  <a-config-provider :locale="antdLocal">
+    <router-view></router-view>
+  </a-config-provider>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-import Main from '@/components/Main.vue'
-
+<script>
+import {computed, defineComponent, ref} from "vue";
+import {useStore} from "vuex";
+import {useI18n} from 'vue-i18n'
 export default defineComponent({
   name: 'App',
-  components: {
-    Main
+  setup() {
+    const store = useStore()
+    const defaultLang = computed(() => store.getters['app/language'])
+
+    const antdLocal = ref(
+      computed(() => {
+        const { getLocaleMessage } = useI18n({ useScope: 'global' })
+        const locale = getLocaleMessage(defaultLang.value).antdLocal
+        return locale
+      })
+    )
+    return {
+      antdLocal
+    }
   }
 })
 </script>
-
-<style lang="stylus">
-#app {
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  box-sizing border-box
-  position relative
-  width 100%
-  height 100%
+<style>
+#app,
+body,
+html {
+  height: 100%;
 }
 </style>
