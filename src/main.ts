@@ -1,12 +1,34 @@
-import { createApp } from 'vue'
-import ElementPlus from 'element-plus'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router, { setupRouter } from '@/router';
+import { setupAntd } from '@/plugins';
+import { setupGlobDirectives } from '@/directives';
+import '@/assets/default.less';
+import useComponents from '@/components/index';
 
-import router from './router/index'
-import store from './store/index'
+import { setupStore } from '@/store';
+import userModule from '@/store/modules/user';
 
-import 'element-plus/lib/theme-chalk/index.css'
+import '@/icons'; // icon
 
-import './style/basic.styl'
+const app = createApp(App);
 
-createApp(App).use(router).use(store).use(ElementPlus).mount('#app')
+/** route */
+setupRouter(app);
+
+/** vuex */
+setupStore(app);
+
+// init session
+userModule.InitToken();
+
+// ant design
+setupAntd(app);
+
+// glogDirectives
+setupGlobDirectives(app);
+
+// useComponents
+app.use(useComponents);
+
+router.isReady().then(() => app.mount('#app'));

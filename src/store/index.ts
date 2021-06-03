@@ -1,27 +1,16 @@
-import { createStore } from 'vuex'
+import type { App } from 'vue';
+import { createStore } from 'vuex';
+import { IAppState } from './modules/app';
+import { IUserState } from './modules/user';
 
-const defaultState = {
-    count: 0
+export interface IRootState {
+  app: IAppState;
+  user: IUserState;
 }
 
-// Create a new store instance.
-export default createStore({
-    state() {
-        return defaultState
-    },
-    mutations: {
-        increment(state: typeof defaultState) {
-            state.count++
-        }
-    },
-    actions: {
-        increment(context) {
-            context.commit('increment')
-        }
-    },
-    getters: {
-        double(state: typeof defaultState) {
-            return 2 * state.count
-        }
-    }
-})
+const store = createStore<IRootState>({});
+export function setupStore(app: App<Element>) {
+  app.use(store);
+}
+
+export default store;

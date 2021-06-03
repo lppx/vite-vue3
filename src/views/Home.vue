@@ -1,22 +1,26 @@
 <template>
-  <div class="home-container page-container">
-    <img class="vue-element-plus-logo" alt="Vue logo" src="../assets/logo.png" />
-    <div class="page-title">Vite2.x + Vue3.x + TypeScript + Element Plus</div>
-  </div>
+  <a-card>
+    <h1 v-if="hasPermission([RoleEnum.系统管理员])">欢迎访问, 系统管理员</h1>
+    <h1 v-if="hasPermission([RoleEnum.科研人员])">欢迎访问, 科研人员</h1>
+    <a-divider>指令方式 使用权限控制</a-divider>
+    <h1 v-auth="[RoleEnum.系统管理员]">欢迎访问, 系统管理员</h1>
+    <h1 v-auth="RoleEnum.科研人员">欢迎访问, 科研人员</h1>
+  </a-card>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-
+import { defineComponent, onMounted } from 'vue';
+import { usePermission } from '@/hooks/web/usePermission';
+import { RoleEnum } from '@/enums/roleEnum';
 export default defineComponent({
-  name: 'Home'
-})
+  name: 'Home',
+  setup() {
+    const { hasPermission } = usePermission();
+    onMounted(() => {});
+    return {
+      hasPermission,
+      RoleEnum,
+    };
+  },
+});
 </script>
-
-<style scoped lang="stylus">
-.home-container {
-  .vue-element-plus-logo {
-    width 50%
-  }
-}
-</style>
